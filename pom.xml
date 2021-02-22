@@ -56,6 +56,12 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.5</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.opentelemetry/opentelemetry-sdk-extension-autoconfigure -->
+        <dependency>
+            <groupId>io.opentelemetry</groupId>
+            <artifactId>opentelemetry-sdk-extension-autoconfigure</artifactId>
+            <version>0.16.0-alpha</version>
+        </dependency>
 
 
     </dependencies>
@@ -79,7 +85,14 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.1.1</version>
 
+
                 <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>io.opentelemetry.example.jaeger.JaegerExample</mainClass>
+                        </manifest>
+                    </archive>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
@@ -96,6 +109,7 @@
                 </executions>
 
             </plugin>
+
         </plugins>
     </build>
 
