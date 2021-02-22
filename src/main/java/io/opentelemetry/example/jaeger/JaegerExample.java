@@ -29,9 +29,9 @@ public class JaegerExample {
         int jaegerPort = Integer.parseInt(args[1]);
 
         // it is important to initialize your SDK as early as possible in your application's lifecycle
-        //  OpenTelemetry openTelemetry = JaegerConfiguration.initOpenTelemetry(jaegerHostName, jaegerPort);
+          OpenTelemetry openTelemetry = JaegerConfiguration.initOpenTelemetry(jaegerHostName, jaegerPort);
 
-        OpenTelemetry openTelemetry = OtelConfiguration.initOpenTelemetry();
+       // OpenTelemetry openTelemetry = OtelConfiguration.initOpenTelemetry();
 
 
         // Start the example
