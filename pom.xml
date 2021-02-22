@@ -62,6 +62,11 @@
             <artifactId>opentelemetry-sdk-extension-autoconfigure</artifactId>
             <version>0.16.0-alpha</version>
         </dependency>
+        <dependency>
+            <groupId>io.opentelemetry</groupId>
+            <artifactId>opentelemetry-extension-annotations</artifactId>
+            <version>0.15.0</version>
+        </dependency>
 
 
     </dependencies>
